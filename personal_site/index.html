@@ -5,61 +5,73 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
-  <title>Bootstrap Example</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Courgette&family=Montserrat:wght@400;600&family=Roboto+Condensed:ital,wght@0,300;1,700&display=swap"
+        rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <title>My page</title>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body class="p-3 m-0 border-0 bd-example m-0 border-0">
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">Menu</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
-            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavDropdown">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="true" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Goals</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Computing
-          </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Why Computing</a></li>
-            <li><a class="dropdown-item" href="#">Favorite Courses</a></li>
-            <li><a class="dropdown-item" href="#">People</a></li>
-            <li><a class="dropdown-item" href="#">Downloads</a></li>
-          </ul>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Hobbies</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">About</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Contact</a>
-        </li>
-      </ul>
+<div class="container my-5">
+  <nav class="navbar sticky-top navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Menu</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+              aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="true" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Goals</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Computing
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Why Computing</a></li>
+              <li><a class="dropdown-item" href="#">Favorite Courses</a></li>
+              <li><a class="dropdown-item" href="#">People</a></li>
+              <li><a class="dropdown-item" href="#">Downloads</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Hobbies</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="container-md main-text-container">
+    <div class="text-container d-flex flex-column justify-content-center align-items-center">
+      <h1>Hello,</h1>
+      <h2>I'm David</h2>
+      <p>I'm Software Engineer</p>
+    </div>
+    <div class="main-image-container container-sm">
+      <img src="./assets/img/user_pfp.jpeg" alt="User profile picture">
     </div>
   </div>
-</nav>
-<div class="container-md main-text-container">
-  <div class="text-container d-flex flex-column justify-content-center align-items-center">
-    <h1>Hello,</h1>
-    <h2>I'm David</h2>
-    <p>I'm Software Engineer</p>
-  </div>
-  <div class="main-image-container">
-    <img src="./assets/img/user_pfp.jpeg" alt="User profile picture">
-  </div>
+  <footer class="bg-dark text-center text-white sticky-bottom">
+    <!-- Grid container -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+      © 2023 Copyright:
+      David Alessandro Cerdas Alvarado
+    </div>
+  </footer>
 
 </div>
-
-
 </body>
 </html>
