@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Courgette&family=Montserrat:wght@400;600&family=Roboto+Condensed:ital,wght@0,300;1,700&display=swap"
+        rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <title>Hobbies</title>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+  <title>Title</title>
+</head>
+<body>
+<div class="container-fluid">
+  <nav class="navbar sticky-top navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Menu</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+              aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="true" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="goals.html">Goals</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Computing
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="computing_pages/whycomputing.html">Why Computing</a></li>
+              <li><a class="dropdown-item" href="computing_pages/favorite_courses.html">Favorite Courses</a></li>
+              <li><a class="dropdown-item" href="computing_pages/people.html">People</a></li>
+              <li><a class="dropdown-item" href="computing_pages/downloads.html">Downloads</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="hobbies.html">Hobbies</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!--End Nav -->
+  <div class="accordion" id="accordionExample">
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingOne">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                aria-expanded="true" aria-controls="collapseOne">
+          Hobby #1: <strong> Programming 💻</strong>
+        </button>
+      </h2>
+      <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+           data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          <strong>This is my first hobby.</strong> I really love practice programming because it converts me into a better
+          thinker and helps me to program faster. Alongside it brings me more acknowledgment about more things as Docker
+          or frameworks.
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingTwo">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo"
+                aria-expanded="false" aria-controls="collapseTwo">
+          Hobby #2: <strong> Gym 🏋️‍♂️</strong>
+        </button>
+      </h2>
+      <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+           data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          <strong>This is the second hobby.</strong> In the past I inverted a lot of time visiting the gym. But now
+          I set aside this. I really want to retake it or try another healthy hobby like Boxing 🥊.
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingThree">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          Hobby #3: <strong>Videogaming 👾 </strong>
+        </button>
+      </h2>
+      <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+           data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          <strong>This is the third hobby.</strong> I play video-games but not a lot. Usually I don't try new videos, just
+          re-playing video games but adding more difficult like Nuzlocking rules.
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--End Accordion -->
+  <footer class="bg-dark text-center text-white sticky-bottom">
+    <!-- Grid container -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+      © 2023 Copyright:
+      David Alessandro Cerdas Alvarado
+    </div>
+  </footer>
+  </div>
+
+</body>
+</html>
