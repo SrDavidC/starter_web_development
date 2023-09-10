@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Courgette&family=Montserrat:wght@400;600&family=Roboto+Condensed:ital,wght@0,300;1,700&display=swap"
+        rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <title>Goals</title>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+  <title>Title</title>
+</head>
+<body>
+<div class="container-fluid">
+  <nav class="navbar sticky-top navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Menu</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+              aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="true" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="goals.html">Goals</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Computing
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="computing_pages/whycomputing.html">Why Computing</a></li>
+              <li><a class="dropdown-item" href="computing_pages/favorite_courses.html">Favorite Courses</a></li>
+              <li><a class="dropdown-item" href="computing_pages/people.html">People</a></li>
+              <li><a class="dropdown-item" href="computing_pages/downloads.html">Downloads</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="hobbies.html">Hobbies</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="accordion" id="accordionExample">
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingOne">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                aria-expanded="true" aria-controls="collapseOne">
+          Goal #1: <strong> Get diploma </strong>
+        </button>
+      </h2>
+      <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+           data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          <strong>This is my first goal.</strong> The main is get my diploma as Software Engineer on the last quartile of
+          2024. This would be accomplished if I finish all the courses with more of 7.0 grade and full block courses
+          from now until december 2024.
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingTwo">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo"
+                aria-expanded="false" aria-controls="collapseTwo">
+          Goal #2: <strong> JavaScript</strong>
+        </button>
+      </h2>
+      <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+           data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          <strong>This is the second goal.</strong> The idea is get a good level of JavaScript alongside of well-used
+          framework on the market as React.
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingThree">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          Goal #3: <strong>English </strong>
+        </button>
+      </h2>
+      <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+           data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          <strong>This is the third goal.</strong> At this moment, my english is at B1 level. So this one of the most
+          important goals, get a B2+ english level. This goal is being accomplished thanks to ESP scholarship and
+          a friend from Canada who helps me to improve my english.
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingFour">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseThree">
+          Goal #4: <strong>Java Development </strong>
+        </button>
+      </h2>
+      <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+           data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          <strong>This is the fourth goal.</strong> I really love Java and I have handled some projects in Java.
+          But I need to improve more, for example, getting knowledge and practice at Frameworks as Spring Boot or
+          moving to Kotlin.
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer class="bg-dark text-center text-white sticky-bottom">
+    <!-- Grid container -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+      © 2023 Copyright:
+      David Alessandro Cerdas Alvarado
+    </div>
+  </footer>
+</div>
+</body>
+</html>
