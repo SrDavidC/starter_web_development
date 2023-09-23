@@ -1,0 +1,72 @@
+USE BD_Universidad
+
+/*A. Recupere el nombre, los apellidos, el número de oficina y la fecha de nombramiento de todos los profesores. */
+SELECT NombreP as Nombre,Apellido1, Apellido2,Oficina,FechaNomb
+FROM Profesor
+
+/* b. Recupere la cédula y el nombre completo de los estudiantes que han llevado el curso ‘ART2’. Recupere también la nota que obtuvieron en dicho curso. */
+SELECT CedEstudiante,NombreP, Estudiante.Apellido1, Estudiante.Apellido2, Nota
+FROM Lleva
+INNER JOIN Estudiante on CedEstudiante = Cedula
+WHERE Lleva.SiglaCurso = 'ART2'
+
+/* c. Recupere el número de carné y el nombre de los estudiantes que tienen notas entre 60 y 80 en cualquier curso, sin que salgan registros repetidos. */
+SELECT DISTINCT CedEstudiante,NombreP, Estudiante.Apellido1, Estudiante.Apellido2
+FROM Lleva
+INNER JOIN Estudiante on CedEstudiante = Cedula
+WHERE Lleva.Nota >= 60 AND Lleva.Nota <= 80
+
+/* d. Recupere la sigla de los cursos que tienen como requisito al curso ‘CI1312’. */
+SELECT SiglaCursoRequeridor
+FROM Requiere_De
+WHERE SiglaCursoRequisito = 'CI1312'
+
+/* e. Recupere la nota máxima, la nota mínima y el promedio de notas obtenidas en el curso ‘CI1221’. Esto debe hacerse en una misma consulta. Dele nombre
+a las columnas del resultado mediante alias. */
+SELECT AVG(Nota) as Promedio, MIN(Nota) as Minimum, MAX(Nota) as Maximum
+FROM Lleva
+WHERE Lleva.SiglaCurso = 'CI1221'
+
+/*f. Recupere el nombre de las Escuelas y el nombre de todas sus Carreras, ordenadas por nombre de Escuela y luego por nombre de Carrera. */
+SELECT Carrera.Nombre as NombreDeCarrera, Escuela.Nombre as NombreDeEscuela
+FROM Carrera
+INNER JOIN Escuela on CodEscuela = Escuela.Codigo
+ORDER BY Escuela.Nombre, Carrera.Nombre
+
+/* g. Recupere la cantidad de profesores que trabajan en la Escuela de Computación e Informática. Suponga que no conoce el código de esta
+escuela, solo su nombre. */
+SELECT NombreP
+FROM Profesor
+INNER JOIN Trabaja_en ON Profesor.Cedula = Trabaja_en.CedProf
+INNER JOIN Escuela ON Trabaja_en.CodEscuela = Escuela.Codigo
+WHERE Escuela.Nombre = 'Escuela de Computación e Informática';
+
+/* h. Recupere la cédula de los estudiantes que no están empadronados en ninguna carrera. */
+SELECT COUNT(NombreP)
+FROM Profesor
+INNER JOIN Trabaja_en ON Profesor.Cedula = Trabaja_en.CedProf
+INNER JOIN Escuela ON Trabaja_en.CodEscuela = Escuela.Codigo
+WHERE Escuela.Nombre = 'Escuela de Computación e Informática';
+
+/* h. Recupere la cédula de los estudiantes que no están empadronados en ninguna carrera. */
+SELECT Cedula
+FROM Estudiante
+WHERE Cedula NOT IN (
+	SELECT CedEstudiante
+	FROM Empadronado_en
+)
+
+/* i. Recupere el nombre de los estudiantes cuyo primer apellido termina en ‘a’. */
+SELECT Estudiante.NombreP, Estudiante.Apellido1
+FROM Estudiante
+WHERE Estudiante.Apellido1 LIKE '%a'
+
+/* i'. ¿Cómo cambiaría la consulta para incluir también a los estudiantes cuyo nombre inicia con M’? */
+SELECT Estudiante.NombreP, Estudiante.Apellido1
+FROM Estudiante
+WHERE Estudiante.Apellido1 LIKE '%a' OR Estudiante.NombreP LIKE 'M%'
+
+/* i''¿Cómo cambiaría la consulta para que solo recupere los estudiantes cuyo primer apellido inicia con ‘M’ y termina con ‘a’?*/
+SELECT Estudiante.NombreP, Estudiante.Apellido1
+FROM Estudiante
+WHERE Estudiante.Apellido1 LIKE 'M%' AND Estudiante.Apellido1 LIKE '%a'
